@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CICLOS"/>
+        <attribute name="authors" value="hp 15-fd0158la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-12 04:48:43 p.&#8239;m."/>
+        <attribute name="created" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0wNjswNjozNjoyNSBwLuKAr20uOzExNTE5"/>
+        <attribute name="edited" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0xMjswNDo0ODo0MyBwLuKAr20uOzI7MTE2MjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="CANTIDAD, I" type="Integer" array="False" size=""/>
+            <input variable="CANTIDAD"/>
+            <for variable="I" start="1" end="CANTIDAD" direction="inc" step="1">
+                <turn expression="144" rotate="right"/>
+                <forward expression="100" pen="down"/>
+                <turn expression="144" rotate="right"/>
+                <forward expression="100" pen="down"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

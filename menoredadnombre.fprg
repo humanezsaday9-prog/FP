@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="EDADNOMB"/>
+        <attribute name="authors" value="hp 15-fd0158la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-06 05:06:50 p.&#8239;m."/>
+        <attribute name="created" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0wNjswMzozNzowNiBwLuKAr20uOzExNTE2"/>
+        <attribute name="edited" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0wNjswNTowNjo1MCBwLuKAr20uOzI7MTE2MjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="D1, D2, D3" type="Integer" array="False" size=""/>
+            <declare name="N1, N2, N3" type="String" array="False" size=""/>
+            <declare name="MN" type="String" array="False" size=""/>
+            <declare name="ME" type="Integer" array="False" size=""/>
+            <input variable="N1"/>
+            <input variable="D1"/>
+            <input variable="N2"/>
+            <input variable="D2"/>
+            <input variable="N3"/>
+            <input variable="D3"/>
+            <assign variable="ME" expression="D1"/>
+            <assign variable="MN" expression="N1"/>
+            <if expression="D2&lt;ME">
+                <then>
+                    <assign variable="ME" expression="D2"/>
+                    <assign variable="MN" expression="N2"/>
+                    <if expression="D3&lt;ME">
+                        <then>
+                            <assign variable="ME" expression="D3"/>
+                            <assign variable="MN" expression="N3"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <output expression="ME" newline="True"/>
+            <output expression="MN" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

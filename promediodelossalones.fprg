@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="SALONES"/>
+        <attribute name="authors" value="hp 15-fd0158la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-13 05:46:40 p.&#8239;m."/>
+        <attribute name="created" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0xMjswNDo1Mzo0NyBwLuKAr20uOzExNTE3"/>
+        <attribute name="edited" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0xMzswNTo0Njo0MCBwLuKAr20uOzQ7MTE2MjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, j, salones, edad, sumatotalEdades, totalAlumnos, alumnos" type="Integer" array="False" size=""/>
+            <declare name="promedio" type="Real" array="False" size=""/>
+            <assign variable="sumaTotalEdades" expression="0"/>
+            <assign variable="totalAlumnos" expression="0"/>
+            <output expression="&quot;ingrese la cantidad de salones&quot;" newline="True"/>
+            <input variable="salones"/>
+            <for variable="i" start="1" end="salones" direction="inc" step="1">
+                <output expression="&quot;ingrese la cantidad de alumnos para el salon&quot;&amp;i&amp;&quot;:&quot;" newline="True"/>
+                <input variable="alumnos"/>
+                <for variable="j" start="1" end="alumnos" direction="inc" step="1">
+                    <output expression="&quot;ingrese la edad del alumno&quot;&amp;j&amp;&quot;del salon&quot;&amp;i&amp;&quot;:&quot;" newline="True"/>
+                    <input variable="edad"/>
+                    <assign variable="sumaTotalEdades" expression="sumaTotalEdades+edad"/>
+                    <assign variable="totalAlumnos" expression="totalAlumnos+1"/>
+                </for>
+            </for>
+            <if expression="totalAlumnos&gt;0">
+                <then>
+                    <assign variable="promedio" expression="sumaTotalEdades/totalAlumnos"/>
+                    <output expression="&quot; edad promedio de los todos los salones&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;no se ingresaron alumnos&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="promedio" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PROMEDIO"/>
+        <attribute name="authors" value="hp 15-fd0158la"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-05-13 04:33:20 p.&#8239;m."/>
+        <attribute name="created" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0wNjswNTo1MjoxMCBwLuKAr20uOzExNTEw"/>
+        <attribute name="edited" value="aHAgMTUtZmQwMTU4bGE7SFAtMTUtRkQwMTU4TEE7MjAyNi0wNS0xMzswNDozMzoyMCBwLuKAr20uOzQ7MTE2MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="EDAD, BECA" type="Integer" array="False" size=""/>
+            <declare name="PROMEDIO" type="Real" array="False" size=""/>
+            <input variable="EDAD"/>
+            <input variable="PROMEDIO"/>
+            <if expression="EDAD&gt;18">
+                <then>
+                    <if expression="PROMEDIO&gt;=9">
+                        <then>
+                            <assign variable="BECA" expression="200000"/>
+                        </then>
+                        <else>
+                            <if expression="PROMEDIO&gt;=7.5">
+                                <then>
+                                    <assign variable="BECA" expression="1000000"/>
+                                </then>
+                                <else>
+                                    <if expression="PROMEDIO&gt;=6.0">
+                                        <then>
+                                            <assign variable="BECA" expression="500000"/>
+                                        </then>
+                                        <else>
+                                            <comment text="ENVIAR CARTA DE INVITACIOM"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="PROMEDIO&gt;=9">
+                        <then>
+                            <assign variable="BECA" expression="3000000"/>
+                        </then>
+                        <else>
+                            <if expression="PROMEDIO&gt;=8">
+                                <then>
+                                    <assign variable="BECA" expression="2000000"/>
+                                </then>
+                                <else>
+                                    <if expression="PROMEDIO&gt;=9">
+                                        <then>
+                                            <assign variable="BECA" expression="3000000"/>
+                                        </then>
+                                        <else>
+                                            <if expression="PROMEDIO&gt;=6">
+                                                <then>
+                                                    <assign variable="BECA" expression="100000"/>
+                                                </then>
+                                                <else>
+                                                    <comment text="ENVIAR CARTA DE INVITACION"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="BECA" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
